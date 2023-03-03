@@ -16,6 +16,15 @@ class Base:
         self.attr = 0
         """Base class attribute"""
 
+    @property
+    def documented_attr(self):
+        """Attribute that gets documented"""
+        return self.attr
+
+    @documented_attr.setter
+    def documented_attr(self, value):
+        self.attr = value
+
 
 class Child(Base):
     """Child class"""
